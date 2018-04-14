@@ -1,0 +1,46 @@
+Table
+Profile tables
+School
+	id, Name, Board,location,City,State.
+Student
+	school_id,user_id,First Name,Last Name,class,DOB,sex,Contact,medical notes,parents_id,type(DS,Hosteler),TransportFlag,Image
+Teacher
+	schoold_id,user_id,First name, Last name,Contact,Sex,Qualification,Address,DOB,Subject,Grade,Image
+Parents
+	student_id,user_id,first_name,Last_name,Contact,Address,Occupation,Qualification
+
+Base Tables
+Exam
+	exam_type_id,exam_type,description('Yearly','Terminal_1','Terminal_2','Terminal_3','Weekly','Monthly',)	
+Class
+	class_id,class_name,class_desc (prenursery,nursery,1 to 12th,others like ssc,banking,rrb,etc)
+Subject
+	subject_id,subject_name,Subject_desc(Math,Physics,Chemistry,Bio,History,geography,civics,Hindi,English,etc)
+Activities
+	activity_id, activity_name,activity_desc(Dance,Music,Painting,drawing)
+Role
+	role_id,Role_Name,Role_desc(School,Teacher,Student,Parents)
+Charges
+	fee_type_id,fee_type,Fee_desc(Admission Fee,monthly fee, course fee,exam fee, misc fee,dress charges,others)
+
+Admin Tables
+Login
+	login_id,password,role,activeflag,active_date,closing_date
+
+Functional Table
+Grade
+	grade_id,student_id,class_id,subject_id,exam_type,marks,remarks
+Payment_info
+	student_id,fee_type_id,amount,date,status
+Student_Activity_mapping
+	student_id,activity_id
+student_subject_mapping
+	student_id,subject_id
+teacher_subject_mapping
+	teacher_id,subject_id
+teacher_activity_mapping
+	teacher_id,activity_id
+
+
+
+
